@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Luka Herceg Webtech Assignment</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Assignment 1 webpage index subsection">
+    <meta name="keywords" content="html,css,web,page,learning,good,grade,bootstrap,javascript,donation_page">
+    <meta name="author" content="Luka Herceg">
+    <meta http-equiv="refresh" content="50">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Cat Food Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cart" onclick="openCart()">🛒</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1><i>Welcome to our Cat Food Donation Page!</i></h1>
+            <article>
+                <div>
+                    <p>This store lets you buy cat food for hungry kitties all over the world,you choose which delicious
+                        dishes
+                        the kitties should get and we shall take care of everything else. Sounds amazing? <b>That's
+                            because
+                            it is.</b>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h2 id="products"><b>Our Products</b></h2>
+                </div>
+                <div>
+                    <div class="row flexcontainer">
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/catfoodwet.png" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Wet cat food 3kg</h5>
+                                    <p class="card-text">$14.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Wet cat food', 14.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/dryfood.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dry Cat Food 2kg</h5>
+                                    <p class="card-text">$9.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Dry Cat Food', 9.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/chicken.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cooked Chicken 2kg</h5>
+                                    <p class="card-text">$9.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Cooked Chicken', 9.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/eggy.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jammy Boiled Eggs Dozen</h5>
+                                    <p class="card-text">$4.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Jammy Boiled Eggs', 4.99)">Add
+                                        to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/fish.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cooked Fish 1kg</h5>
+                                    <p class="card-text">$8.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Cooked Fish', 8.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/PUMPKIN.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cooked Pumpkin 1kg</h5>
+                                    <p class="card-text">$4.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Cooked Pumpkin', 4.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/supplementcats.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Joint Supplements 60 Capsules</h5>
+                                    <p class="card-text">$24.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Joint Supplements', 24.99)">Add
+                                        to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/catfoodstick.png" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Snack Sticks 3 Pieces</h5>
+                                    <p class="card-text">$3.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Snack Sticks', 3.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/melk.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bowl of Milk</h5>
+                                    <p class="card-text">$1.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Bowl of Milk', 1.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="card hover">
+                                <img src="images/bonebroth.jpg" class="card-img-top" height="300" width="300">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bone Broth 300g</h5>
+                                    <p class="card-text">$12.99</p>
+                                    <button class="btn btn-success" onclick="addToCart('Bone Broth', 12.99)">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h5>Got everything you wanted? Click the button to checkout and do a good deed for some kitties!</h5>
+                <button class="btn btn-success" onclick="showCheckout()">Checkout!</button>
+                <div id="checkoutForm" class="container mt-4" style="display: none;">
+                    <h3>Buyer Information</h3>
+                    <small>We will never share this information with anyone.</small>
+                    <form onsubmit="return validateForm()">
+                        <div class="form-group mb-3">
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Your First Name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Your Last Name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label" for="adress">Adresss</label>
+                            <input type="text" class="form-control" id="adress" placeholder="Billing Adress">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="example@email.com">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" placeholder="Your city">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">ZIP Code</label>
+                                <input type="text" class="form-control" placeholder="Max 6 characters">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success mt-3" onclick="showRegistration()">
+                                Confirm Donation
+                            </button>
+                    </form>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div id="cartOverlay">
+                    <div class="cart-header">
+                        <h4>Your Cart</h4>
+                        <button class="btn btn-sm btn-danger" onclick="closeCart()">X</button>
+                    </div>
+                    <ul id="cartList" class="list-group mb-3"></ul>
+                    <p><strong>Total: $<span id="cartTotal">0.00</span></strong></p>
+                    <button class="btn btn-success w-100" onclick="showCheckout()">Checkout</button>
+                </div>
+            </article>
+            <article>
+                <div id="cartConfirmation" style="display:none; margin-top:20px;">
+                    <h5>Order Summary</h5>
+                    <ul id="confirmationList" class="list-group mb-2"></ul>
+                    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                    <p>Discount: $<span id="discount">0.00</span></p>
+                    <p>Tax (10%): $<span id="tax">0.00</span></p>
+                    <p><strong>Total: $<span id="finalTotal">0.00</span></strong></p>
+                    <button type="button" class="btn btn-success mt-3" onclick="confirmDonation()">Confirm Order!</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>Click <a href="#top">here</a> to go back to the top of the page.</p>
+
+        <p> Cat Food Store,located in Krems an Der Donau,Austria.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>

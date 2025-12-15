@@ -1,0 +1,76 @@
+:root {
+    --base-color: #DBB1BC;
+    --text-color: #000000;
+    --primary-color: #DBB1BC;
+    --secondary-color: #D3C4E3;
+    --color-1: #8F95D3;
+    --color-2: #89DAFF;
+    --color-3: #58504A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+    color: var(--color-3);
+}
+header,
+section,
+article {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+/* the main class for containers used all over the webpage */
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.flexcontainer .col-md-4 {
+    flex: 0 0 32%;
+    box-sizing: border-box;
+}
+
+/* making the footer pretty */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* code for making the cart appear on the right hand side of the webpage,got help from a Discord server */
+#cartOverlay { 
+    position: fixed;
+    top: 0;
+    right: -350px;
+    /* hidden off screen */
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    transition: right 0.3s ease;
+    z-index: 9999;
+}
+
+#cartOverlay.show {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hover:hover {
+    box-shadow: 0 10px 30px var(--color-3);
+    scale: 1.05;
+}
